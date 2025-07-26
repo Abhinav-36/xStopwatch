@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Counter(){
-    const [isRunning,setIsRunning] = useState(true);
+    const [isRunning,setIsRunning] = useState(false);
     const [seconds,setSeconds] = useState(0);
 
     useEffect(()=>{
@@ -37,7 +37,7 @@ export default function Counter(){
         <div className="heading">
             <h1>Stopwatch</h1>
             {formatTime(seconds)}
-            <button type="button" onClick={handlestopStart} >{isRunning?"Stop":"Start"}</button>
+            <button type="button" onClick={handlestopStart} >{isRunning? "Stop":"Start"}</button>
             <button type="button" onClick={handlereset}>Reset</button>
         </div>
     );
